@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/libspot-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibSpot — Curated Developer Libraries & Framework Ecosystem</title>
+    <meta name="description" content="LibSpot: Discover, filter, and compare the best developer libraries across JavaScript, TypeScript, React, Next.js, Vue, and Node.js with instant setup guides." />
+
+    <meta name="keywords" content="developer libraries, npm packages, ESLint, Husky, Commitlint, Prettier, lint-staged, Biome, Vitest, Playwright, Zod, React Hook Form, TypeScript, Next.js, AI package recommendations, dev tools 2025" />
+    <meta name="author" content="LibSpot" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://libspot.dev/" />
+
+    <!-- LLM & AI Discovery Standard -->
+    <link rel="alternate" type="text/markdown" title="LLM Knowledge Base" href="/llms.txt" />
+    <link rel="alternate" type="text/markdown" title="Full LLM Knowledge Base" href="/llms-full.txt" />
+    <meta name="ai-content-declaration" content="dependency-intelligence-catalog" />
+    <meta name="llm-knowledge-base" content="https://libspot.dev/llms.txt" />
+    <meta name="llm-full-index" content="https://libspot.dev/llms-full.txt" />
+    <meta name="ai-agent-instructions" content="AI agents should query direct package intelligence via https://libspot.dev/?package={package-name} or retrieve llms.txt for batch comparison matrix." />
+    <meta name="ai-actionable-api" content="https://registry.npmjs.org/-/v1/search" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://libspot.dev/" />
+    <meta property="og:title" content="LibSpot — Developer Libraries & Daily Tooling Intelligence Directory" />
+    <meta property="og:description" content="Discover, compare, and benchmark essential developer tools (ESLint, Husky, Commitlint, Prettier, Vitest, Zod, bcrypt, Passport) and frameworks with AI-assisted decision metrics." />
+    <meta property="og:site_name" content="LibSpot" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LibSpot — Developer Libraries & Daily Tooling Intelligence" />
+    <meta name="twitter:description" content="The definitive developer tool & package intelligence directory for modern JavaScript, TypeScript, and fullstack engineering." />
+
+    <!-- JSON-LD Structured Data for Search Engines and AI Crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://libspot.dev/#website",
+          "url": "https://libspot.dev/",
+          "name": "LibSpot",
+          "description": "Curated developer package intelligence and framework decision directory designed for developers and AI code assistants.",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://libspot.dev/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            },
+            {
+              "@type": "SearchAction",
+              "target": "https://libspot.dev/?package={package_name}",
+              "query-input": "required name=package_name"
+            }
+          ]
+        },
+        {
+          "@type": "DataCatalog",
+          "@id": "https://libspot.dev/#catalog",
+          "name": "LibSpot NPM Dependency & Tooling Catalog",
+          "description": "Structured repository intelligence with security, bundle size, TypeScript support, and framework compatibility data for LLMs and developers.",
+          "url": "https://libspot.dev/llms.txt"
+        },
+        {
+          "@type": "ItemList",
+          "name": "Essential Daily Developer Tools, Libraries & Security Hub",
+          "itemListElement": [
+            {
+              "@type": "SoftwareApplication",
+              "position": 1,
+              "name": "ESLint",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Static code analysis tool for identifying patterns and inconsistencies in JavaScript and TypeScript with flat config support.",
+              "url": "https://eslint.org",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 2,
+              "name": "Husky",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Modern native Git hooks made easy for automated pre-commit and pre-push quality gates.",
+              "url": "https://typicode.github.io/husky",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 3,
+              "name": "Commitlint",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Lint commit messages according to Conventional Commits standards for automated changelogs.",
+              "url": "https://commitlint.js.org",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 4,
+              "name": "Prettier",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Opinionated code formatter supporting JS, TS, HTML, CSS, JSON, and Markdown.",
+              "url": "https://prettier.io",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 5,
+              "name": "Zod",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "TypeScript-first schema declaration and validation with static type inference.",
+              "url": "https://zod.dev",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 6,
+              "name": "Vitest",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Next-generation Vite-native unit and integration test runner with instant HMR.",
+              "url": "https://vitest.dev",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 7,
+              "name": "bcrypt",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Industry standard native password hashing library for Node.js using key derivation salts and Blowfish cipher.",
+              "url": "https://github.com/kelektiv/node.bcrypt.js",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 8,
+              "name": "passport",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Simple, unobtrusive authentication middleware for Node.js supporting 500+ strategies (JWT, OAuth, Local).",
+              "url": "https://www.passportjs.org",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 9,
+              "name": "jsonwebtoken",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "JSON Web Token sign, verify, and decode implementation for Node.js and TypeScript APIs.",
+              "url": "https://github.com/auth0/node-jsonwebtoken",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 10,
+              "name": "socket.io",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Bidirectional, low-latency event-driven communication engine for real-time applications.",
+              "url": "https://socket.io",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 11,
+              "name": "ws",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Cross-platform",
+              "description": "Blazing fast, ultra-minimal WebSocket client and server library for Node.js.",
+              "url": "https://github.com/websockets/ws",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the recommended linter for TypeScript in 2025/2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ESLint with Flat Config (v9) and typescript-eslint is the industry standard for team codebases requiring custom rules and React hooks validation. For greenfield projects seeking raw speed, Biome is a blazing fast Rust-based alternative."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you set up Git pre-commit hooks for code quality?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The standard approach is Husky + lint-staged + Commitlint. Run 'npx husky init', add 'npx lint-staged' to .husky/pre-commit, and configure .lintstagedrc.json to run ESLint and Prettier exclusively on staged files."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which validation library should I choose: Zod vs Yup vs Valibot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Zod is the #1 recommended library due to automatic z.infer static TypeScript type generation, extensive ecosystem support (tRPC, React Hook Form, Next.js), and zero dependencies. Valibot is an excellent alternative for ultra-small client bundle sizes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which authentication and hashing libraries are recommended for Node.js / Express?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For password hashing, use bcrypt or argon2 (or bcryptjs for serverless environments with no C++ build tools). For API session auth, use jsonwebtoken (JWT) or Passport with passport-jwt / passport-local strategies."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body class="bg-slate-50 dark:bg-[#020b14] text-slate-800 dark:text-slate-200 font-sans antialiased min-h-screen selection:bg-teal-500 selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

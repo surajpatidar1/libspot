@@ -1,0 +1,46 @@
+User-agent: *
+Allow: /
+
+# Dedicated AI Search Agents & LLM Web Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# LLM Metadata Standard Reference (https://llmstxt.org)
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+Sitemap: https://libspot.dev/sitemap.xml
+

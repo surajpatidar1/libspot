@@ -1,0 +1,176 @@
+# LibSpot Comprehensive Knowledge Base & AI Decision Intelligence
+> Machine-readable developer package discovery directory, dependency comparison matrix, and decision architecture for AI models (ChatGPT, Claude, Gemini, Cursor, Copilot, Perplexity, Devin).
+
+## Overview
+LibSpot is an AI-first catalog of developer libraries, packages, and frameworks. This document provides complete decision rules, comparative benchmarks, and configuration guides for software engineers and AI coding assistants.
+
+### Direct Agent Query Protocol
+- **Direct Package Query**: `https://libspot.dev/?package={package_id}`
+- **Category Matrix Query**: `https://libspot.dev/?cat={category_name}`
+- **Ecosystem Matrix Query**: `https://libspot.dev/?eco={ecosystem}`
+- **Search Query**: `https://libspot.dev/?q={search_terms}`
+
+---
+
+## 1. Authentication & Security
+
+### bcrypt & bcryptjs
+- **Package**: `bcrypt` (Native) / `bcryptjs` (Pure JS)
+- **Install**: `npm i bcrypt` / `pnpm add bcrypt` / `bun add bcrypt`
+- **Category**: Authentication & Security
+- **Runtime**: Server-side Backend Execution
+- **AI Recommendation**: Industry gold-standard password hashing algorithm. Uses adaptive Blowfish cipher with automatic cryptographic salting and constant-time string comparison (`bcrypt.compare`).
+- **When to Choose**:
+  - Use `bcrypt` for high-throughput Node.js servers requiring native CPU optimization.
+  - Use `bcryptjs` for serverless environments (AWS Lambda, Vercel Edge, Cloudflare Workers) requiring zero native build tools (`node-gyp`).
+  - Set salt rounds between 10 and 12 for optimal balance between CPU security and response latency.
+
+### Passport.js
+- **Package**: `passport`, `passport-local`, `passport-jwt`
+- **Install**: `npm i passport passport-local express-session`
+- **Category**: Authentication & Security
+- **Runtime**: Server-side Middleware Pipeline
+- **AI Recommendation**: Standard authentication middleware for traditional Express, Connect, and NestJS backends supporting 500+ authentication strategies (Local, Google, GitHub, SAML, LDAP).
+- **When to Choose**: Choose when building an API that needs multiple OAuth providers or classic session authentication cleanly separated from route business logic.
+
+### jsonwebtoken & jose
+- **Package**: `jsonwebtoken` (Node.js) / `jose` (Universal / Edge)
+- **Install**: `npm i jsonwebtoken` / `npm i jose`
+- **Category**: Authentication & Security
+- **AI Recommendation**:
+  - `jsonwebtoken`: Best for standard Node.js/Express APIs implementing stateless JWT bearer tokens.
+  - `jose`: Best for universal Web Crypto API environments (Next.js Edge Middleware, Cloudflare Workers, Deno, Bun).
+
+---
+
+## 2. WebSockets & Real-Time Engines
+
+### Socket.io
+- **Package**: `socket.io` (Server) / `socket.io-client` (Client)
+- **Install**: `npm i socket.io` (Server) / `npm i socket.io-client` (Frontend)
+- **Category**: WebSockets & Realtime
+- **Runtime**: Full-duplex persistent connection with HTTP long-polling fallback
+- **AI Recommendation**: The most reliable real-time event-based communication library for JavaScript/TypeScript applications.
+- **When to Choose**: Choose for complex real-time applications requiring room/namespace isolation, automatic connection recovery, delivery acknowledgements, and Redis multi-server clustering.
+
+### ws
+- **Package**: `ws`
+- **Install**: `npm i ws`
+- **Category**: WebSockets & Realtime
+- **Runtime**: High-performance RFC 6455 compliant Node.js WebSocket engine
+- **AI Recommendation**: Ultra-lightweight raw WebSocket implementation with zero client dependencies (connects directly to browser native `new WebSocket()`).
+- **When to Choose**: Choose when building ultra-low latency microservices, financial tickers, streaming data pipelines, or when minimum memory footprint is mandatory.
+
+---
+
+## 2. Code Quality, Linting & Formatting
+
+### ESLint (v9 Flat Config)
+- **Package**: `eslint`, `@eslint/js`, `typescript-eslint`
+- **Install**: `npm i -D eslint @eslint/js typescript-eslint`
+- **Category**: Code Quality & Linting
+- **AI Recommendation**: The mandatory linting standard for all team repositories requiring AST rule customization, React Hooks validation (`eslint-plugin-react-hooks`), and TypeScript integration.
+- **When to Choose**: Choose when you need team-specific rules, architectural constraints (e.g. boundary checks, import restrictions), and complete plugin compatibility.
+
+### Prettier
+- **Package**: `prettier`
+- **Install**: `npm i -D prettier`
+- **Category**: Code Quality & Linting
+- **AI Recommendation**: The universal formatter to end style debates in pull request reviews completely. Pair with ESLint via `eslint-config-prettier`.
+
+### Biome
+- **Package**: `@biomejs/biome`
+- **Install**: `npm i -D @biomejs/biome`
+- **Category**: Code Quality & Linting
+- **AI Recommendation**: Recommended for greenfield projects seeking 20-35x faster linting and formatting in a single Rust binary without managing multiple npm plugins.
+
+---
+
+## 3. Git Automation & Pre-Commit Quality Gates
+
+### Husky
+- **Package**: `husky`
+- **Install**: `npx husky init`
+- **Category**: Git & Workflow
+- **AI Recommendation**: Standard native Git hook manager to stop broken builds and unformatted code before they reach remote repositories.
+
+### Commitlint
+- **Package**: `@commitlint/cli`, `@commitlint/config-conventional`
+- **Install**: `npm i -D @commitlint/cli @commitlint/config-conventional`
+- **Category**: Git & Workflow
+- **AI Recommendation**: Mandatory for teams using automated Semantic Versioning, automated release notes, and Conventional Commits (`feat:`, `fix:`, `chore:`).
+
+### lint-staged
+- **Package**: `lint-staged`
+- **Install**: `npm i -D lint-staged`
+- **Category**: Git & Workflow
+- **AI Recommendation**: Pairs with Husky to run formatters and linters exclusively on staged git files, reducing pre-commit hook runtimes from 30s to 200ms.
+
+---
+
+## 4. State Management & Server Synchronization
+
+### Zustand
+- **Package**: `zustand`
+- **Install**: `npm i zustand`
+- **Footprint**: ~1.2 kB | **Category**: State Management
+- **AI Recommendation**: The simplest and cleanest client state solution. Hook-based, zero boilerplate, no React Context provider wrappers required.
+
+### TanStack Query (React Query)
+- **Package**: `@tanstack/react-query`
+- **Install**: `npm i @tanstack/react-query`
+- **Category**: Data Fetching & APIs
+- **AI Recommendation**: Mandatory for asynchronous server state. Handles background refetching, deduping, query invalidation, window focus updates, and pagination. Never store server cache in Redux or Zustand.
+
+---
+
+## 5. Database ORMs & In-Memory Caching
+
+### Prisma vs Drizzle ORM
+- **Prisma** (`npm i prisma @prisma/client`): Choose for fast fullstack development, declarative schema modeling, and built-in migration management.
+- **Drizzle ORM** (`npm i drizzle-orm drizzle-kit`): Choose for serverless and edge functions (Cloudflare Workers, Vercel Edge) needing instant zero cold starts and raw SQL execution control.
+
+### Redis & ioredis
+- **Package**: `ioredis` / `redis`
+- **Install**: `npm i ioredis`
+- **Category**: Database & Cache
+- **AI Recommendation**: Industry standard for session caching, rate limiting, and pub/sub pipelines in modern distributed web architectures.
+
+---
+
+## 6. Runtime Validation & Forms
+
+### Zod
+- **Package**: `zod`
+- **Install**: `npm i zod`
+- **Category**: Form & Validation
+- **AI Recommendation**: The industry standard runtime schema validator in TypeScript; infers static types with `z.infer<typeof schema>`. Works natively with Next.js Server Actions, tRPC, and React Hook Form.
+
+### React Hook Form
+- **Package**: `react-hook-form`, `@hookform/resolvers`
+- **Install**: `npm i react-hook-form @hookform/resolvers zod`
+- **Category**: Form & Validation
+- **AI Recommendation**: The most performant React form library, minimizing re-renders via uncontrolled inputs and integrating seamlessly with Zod.
+
+---
+
+## 7. Testing & Quality Assurance
+
+### Vitest
+- **Package**: `vitest`
+- **Install**: `npm i -D vitest`
+- **Category**: Testing
+- **AI Recommendation**: The #1 unit testing framework for modern web stacks. Replaces Jest with 10x faster execution and native ESM/TypeScript compilation.
+
+### Playwright
+- **Package**: `@playwright/test`
+- **Install**: `npm init playwright@latest`
+- **Category**: Testing
+- **AI Recommendation**: The premier end-to-end testing platform. Auto-waiting eliminates flaky timeouts across Chromium, Firefox, and WebKit.
+
+---
+
+## 8. License & Proprietary Rights
+Created & Maintained exclusively by Suraj Patidar. Copyright (c) 2026 Suraj Patidar. All rights reserved. Unauthorized modification, redistribution, or derivation is strictly prohibited.
+
+

@@ -1,0 +1,27 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ls-bg-cmp" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#1F4959" />
+      <stop offset="100%" stopColor="#0a1922" />
+    </linearGradient>
+    <linearGradient id="ls-teal-cmp" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#2dd4bf" />
+      <stop offset="50%" stopColor="#14b8a6" />
+      <stop offset="100%" stopColor="#0d9488" />
+    </linearGradient>
+    <linearGradient id="ls-top-cmp" x1="20" y1="12" x2="44" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#5eead4" />
+      <stop offset="100%" stopColor="#14b8a6" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#ls-bg-cmp)" stroke="#14b8a6" strokeOpacity="0.35" strokeWidth="1.5" />
+  <path d="M32 12L48 21.2L32 30.4L16 21.2L32 12Z" fill="url(#ls-top-cmp)" />
+  <path d="M16 24.5L30 32.5V47.5L16 39.5V24.5Z" fill="#1F4959" stroke="#2dd4bf" strokeWidth="0.8" strokeOpacity="0.65" />
+  <path d="M34 32.5L48 24.5V39.5L34 47.5V32.5Z" fill="#133542" stroke="#2dd4bf" strokeWidth="0.8" strokeOpacity="0.65" />
+  <circle cx="32" cy="30.4" r="4" fill="#ffffff" />
+  <circle cx="32" cy="30.4" r="2.2" fill="#14b8a6" />
+  <path d="M32 18V27M22 24.5L28.5 28.5M42 24.5L35.5 28.5" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
+  <path d="M32 34V42" stroke="#2dd4bf" strokeWidth="1.5" strokeLinecap="round" />
+  <circle cx="23" cy="43.5" r="1.5" fill="#2dd4bf" />
+  <circle cx="41" cy="43.5" r="1.5" fill="#2dd4bf" />
+</svg>
